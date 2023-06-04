@@ -36,19 +36,19 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   get: ^4.6.5
   shared_preferences: ^2.0.15
-  multiselect: ^0.0.7
+  multiselect: ^0.1.0
   filter_list: ^1.0.2
   multi_select_flutter: ^4.1.2
-  flutter_svg: ^1.1.6
+  flutter_svg: ^2.0.6
   custom_date_range_picker: ^1.0.6
   flutter_easyloading: ^3.0.5
-  http: ^0.13.5
-  intl: ^0.17.0
-  modal_progress_hud_nsn: ^0.3.0
+  http: ^1.0.0
+  intl: ^0.18.0
+  modal_progress_hud_nsn: ^0.4.0
   sizer: ^2.0.15
-  syncfusion_flutter_datagrid: ^20.3.59
-  simple_fontellico_progress_dialog: ^0.2.1
-  connectivity_plus: ^3.0.2
+  syncfusion_flutter_datagrid: ^21.2.8
+  simple_fontellico_progress_dialog: ^0.3.0
+  connectivity_plus: ^4.0.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
