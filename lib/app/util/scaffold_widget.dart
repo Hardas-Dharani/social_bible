@@ -7,10 +7,13 @@ import '../services/local_storage.dart';
 
 class ScafoldedWidget extends StatelessWidget {
   final Widget body;
-  const ScafoldedWidget({super.key, required this.body});
+  final Widget? bottomNavigationBar;
+  const ScafoldedWidget(
+      {super.key, required this.body, this.bottomNavigationBar});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        bottomNavigationBar: bottomNavigationBar,
         body: Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(

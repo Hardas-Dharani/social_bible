@@ -33,6 +33,10 @@ class CustomButton extends StatelessWidget {
           backgroundColor: Colors.transparent,
           shadowColor: Colors.transparent,
           shape: RoundedRectangleBorder(
+              side: const BorderSide(
+                color: Colors.black,
+                width: 2,
+              ),
               borderRadius:
                   borderRadius ?? const BorderRadius.all(Radius.circular(33))),
         ),

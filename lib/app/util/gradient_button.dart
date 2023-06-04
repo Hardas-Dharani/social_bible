@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:social_bible/app/extensions/color.dart';
+import 'package:social_bible/app/util/util.dart';
 
 class CustomGradientButton extends StatelessWidget {
   final BorderRadiusGeometry? borderRadius;
@@ -23,11 +24,11 @@ class CustomGradientButton extends StatelessWidget {
       width: width,
       height: height,
       decoration: BoxDecoration(
-        gradient: gradient ??
-            LinearGradient(colors: [
-              HexColor('00C5E0').withOpacity(0.9),
-              HexColor('00FFA8').withOpacity(0.9)
-            ]),
+        gradient: gradient ?? Utils.getPurpleGradient(),
+        // LinearGradient(colors: [
+        //   HexColor('00C5E0').withOpacity(0.9),
+        //   HexColor('00FFA8').withOpacity(0.9)
+        // ]),
         borderRadius:
             borderRadius ?? const BorderRadius.all(Radius.circular(33)),
       ),

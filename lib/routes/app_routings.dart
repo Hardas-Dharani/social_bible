@@ -1,7 +1,9 @@
 import 'package:get/get.dart';
+import 'package:social_bible/presentation/pages/application/application_view.dart';
 import 'package:social_bible/presentation/pages/sign_up/sign_up_page.dart';
 import 'package:social_bible/presentation/pages/splash/start_page.dart';
 
+import '../presentation/pages/application/binding/application_binding.dart';
 import '../presentation/pages/sign_in/binding/sign_in_binding.dart';
 import '../presentation/pages/sign_in/sign_in_page.dart';
 import '../presentation/pages/sign_up/binding/sign_up_binding.dart';
@@ -28,6 +30,11 @@ class RoutingModule {
     GetPage(
       name: Routes.startScreen,
       page: () => const StartPage(),
+    ),
+    GetPage(
+      name: Routes.applicationScreen,
+      page: () => const ApplicationView(),
+      binding: ApplicationsBinding(),
     ),
   ];
 }

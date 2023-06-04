@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:social_bible/app/util/scafolded_wi_new.dart';
 
 import '../../../app/util/scaffold_widget.dart';
 import '../../../app/util/util.dart';

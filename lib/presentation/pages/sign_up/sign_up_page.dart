@@ -12,6 +12,7 @@ import '../../../app/util/eveleted_button.dart';
 import '../../../app/util/gradient_button.dart';
 import '../../../app/util/loader.dart';
 import '../../../app/util/scaffold_widget.dart';
+import '../../../app/util/scafolded_wi_new.dart';
 import '../../../app/util/util.dart';
 import '../../../routes/app_routes.dart';
 import 'controller/sign_up_controller.dart';
@@ -25,7 +26,7 @@ class SignUpScreen extends GetView<SignupController> {
       context: context,
       barrierDimisable: false,
     );
-    return ScafoldedWidget(
+    return ScafoldedWidget2(
         body: SafeArea(
       child: Form(
         key: controller.formKey,
