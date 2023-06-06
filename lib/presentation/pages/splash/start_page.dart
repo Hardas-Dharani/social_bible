@@ -32,107 +32,131 @@ class StartPage extends StatelessWidget {
             height: Get.height * 0.02,
           ),
           CommonText(
-            text: 'Connect',
+            text: 'Welcome to',
             fontSize: 21,
             color: AppColors.white,
           ),
           CommonText(
-            text: 'Wirelessly & Effortlessly',
+            text: 'Soical Bible Commentray',
             fontSize: 21,
             color: AppColors.white,
           ),
           SizedBox(
             height: Get.height * 0.04,
           ),
-          CustomGradientButton(
-            onPressed: () {
-              Get.toNamed(Routes.signUpScreen);
-            },
-            child: CommonText(
-              text: 'SIGN UP FREE',
-              fontSize: 18,
-              color: HexColor('262A38'),
-            ),
-          ),
-          SizedBox(
-            height: Get.height * 0.02,
-          ),
-          CustomButton(
-            onPressed: () {
-              Get.toNamed(Routes.signInScreen);
-            },
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                SvgPicture.asset(
-                  Utils.getSvgFilePath("icon-google"),
-                ),
-                CommonText(
-                  text: "Continue with Google",
-                  fontSize: 18,
+          Expanded(
+            child: Container(
+              alignment: Alignment.center,
+              width: Get.width,
+              decoration: BoxDecoration(
                   color: AppColors.white,
-                ),
-              ],
+                  borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(20))),
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CustomGradientButton(
+                      onPressed: () {
+                        Get.toNamed(Routes.signUpScreen);
+                      },
+                      child: CommonText(
+                        text: 'SIGN UP FREE',
+                        fontSize: 18,
+                        color: AppColors.white,
+                      ),
+                    ),
+                    SizedBox(
+                      height: Get.height * 0.02,
+                    ),
+                    CustomButton(
+                      onPressed: () {
+                        Get.toNamed(Routes.signInScreen);
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          SvgPicture.asset(
+                            Utils.getSvgFilePath("icon-google"),
+                          ),
+                          CommonText(
+                            text: "Continue with Google",
+                            fontSize: 18,
+                            color: AppColors.black,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: Get.height * 0.02,
+                    ),
+                    CustomButton(
+                      onPressed: () {
+                        Get.toNamed(Routes.signInScreen);
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          SvgPicture.asset(
+                            Utils.getSvgFilePath("icons-facebook"),
+                          ),
+                          CommonText(
+                            text: "Continue with Facebook",
+                            fontSize: 18,
+                            color: AppColors.black,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: Get.height * 0.02,
+                    ),
+                    CustomButton(
+                      onPressed: () {
+                        Get.toNamed(Routes.signInScreen);
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          SvgPicture.asset(
+                            Utils.getSvgFilePath(
+                              "icon-apple",
+                            ),
+                            color: AppColors.black,
+                          ),
+                          CommonText(
+                            text: "Continue with Apple",
+                            fontSize: 18,
+                            color: AppColors.black,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: Get.height * 0.03,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CommonText(
+                          text: "Already have account? ",
+                          color: HexColor("585858"),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Get.toNamed(Routes.signInScreen);
+                          },
+                          child: CommonText(
+                            text: "Sign in",
+                            color: AppColors.primary,
+                            fontSize: 18,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
             ),
-          ),
-          SizedBox(
-            height: Get.height * 0.02,
-          ),
-          CustomButton(
-            onPressed: () {
-              Get.toNamed(Routes.signInScreen);
-            },
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                SvgPicture.asset(
-                  Utils.getSvgFilePath("icons-facebook"),
-                ),
-                CommonText(
-                  text: "Continue with Facebook",
-                  fontSize: 18,
-                  color: AppColors.white,
-                ),
-              ],
-            ),
-          ),
-          SizedBox(
-            height: Get.height * 0.02,
-          ),
-          CustomButton(
-            onPressed: () {
-              Get.toNamed(Routes.signInScreen);
-            },
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                SvgPicture.asset(
-                  Utils.getSvgFilePath(
-                    "icon-apple",
-                  ),
-                  color: AppColors.white,
-                ),
-                CommonText(
-                  text: "Continue with Apple",
-                  fontSize: 18,
-                  color: AppColors.white,
-                ),
-              ],
-            ),
-          ),
-          SizedBox(
-            height: Get.height * 0.03,
-          ),
-          GestureDetector(
-            onTap: () {
-              Get.toNamed(Routes.signInScreen);
-            },
-            child: CommonText(
-              text: "Log in",
-              color: AppColors.white,
-              fontSize: 18,
-            ),
-          ),
+          )
         ],
       ),
     );
