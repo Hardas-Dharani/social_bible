@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:simple_fontellico_progress_dialog/simple_fontico_loading.dart';
 import 'package:sizer/sizer.dart';
+import 'package:social_bible/routes/app_routes.dart';
 
 import '../../../app/config/app_colors.dart';
 import '../../../app/util/common_txt.dart';
@@ -179,7 +180,9 @@ class SigInScreen extends GetView<SigninController> {
                             height: Get.height * 0.05,
                           ),
                           CustomGradientButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Get.toNamed(Routes.bottomBar);
+                            },
                             child: CommonText(
                               text: 'Sign in',
                               fontSize: 18,

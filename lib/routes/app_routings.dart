@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 import 'package:social_bible/presentation/pages/sign_up/sign_up_page.dart';
 import 'package:social_bible/presentation/pages/splash/start_page.dart';
 
+import '../presentation/pages/bottom_bar/binding/bottom_bar_binding.dart';
+import '../presentation/pages/bottom_bar/bottom_bar.dart';
 import '../presentation/pages/sign_in/binding/sign_in_binding.dart';
 import '../presentation/pages/sign_in/sign_in_page.dart';
 import '../presentation/pages/sign_up/binding/sign_up_binding.dart';
@@ -14,6 +16,11 @@ class RoutingModule {
       name: Routes.splashScreen,
       page: () => const SplashScreen(),
       // binding: SplashBinding(),
+    ),
+    GetPage(
+      name: Routes.bottomBar,
+      page: () => const BottomNavigationBars(),
+      binding: BottomBarBinding(),
     ),
     GetPage(
       name: Routes.signInScreen,
