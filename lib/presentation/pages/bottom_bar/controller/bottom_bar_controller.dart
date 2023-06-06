@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 import '../../browser_tab/borwser_tab.dart';
+import '../../chat/chat.dart';
 import '../../home_tab/home_tab.dart';
 
 class BottomBarController extends GetxController {
@@ -16,9 +17,7 @@ class BottomBarController extends GetxController {
     const Center(
       child: Text("Contact"),
     ),
-    const Center(
-      child: Text("Settings"),
-    ),
+    const ChatScreen()
   ];
 
   void changeTab(int index) {
