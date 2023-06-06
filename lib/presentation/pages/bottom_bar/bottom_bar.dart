@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:social_bible/app/config/app_colors.dart';
 
 import 'controller/bottom_bar_controller.dart';
 
@@ -14,8 +15,12 @@ class BottomNavigationBars extends GetView<BottomBarController> {
         () => BottomNavigationBar(
           currentIndex: controller.selectedTab.value,
           onTap: controller.changeTab,
-          selectedItemColor: Colors.red,
-          unselectedItemColor: Colors.grey,
+          showUnselectedLabels: true,
+          selectedFontSize: 10,
+          unselectedFontSize: 10,
+          showSelectedLabels: true,
+          selectedItemColor: Colors.orangeAccent,
+          unselectedItemColor: AppColors.primary,
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
             BottomNavigationBarItem(icon: Icon(Icons.book), label: "Bible"),

@@ -48,6 +48,8 @@ dependencies:
   sizer: ^2.0.15
   lottie: ^2.4.0
   get_storage:
+  font_awesome_flutter:
+  expandable_text: ^2.3.0
   syncfusion_flutter_datagrid: ^21.2.8
   simple_fontellico_progress_dialog: ^0.3.0
   connectivity_plus: ^4.0.1

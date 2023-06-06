@@ -3,18 +3,17 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 import '../../browser_tab/borwser_tab.dart';
+import '../../home_tab/home_tab.dart';
 
 class BottomBarController extends GetxController {
   var selectedTab = 0.obs;
   final List<Widget> pages = [
-    const Center(
-      child: Text("About"),
-    ),
+    const HomeTab(),
     const Center(
       child: Text("Products"),
     ),
     const BrowserTab(),
-    const Center( 
+    const Center(
       child: Text("Contact"),
     ),
     const Center(

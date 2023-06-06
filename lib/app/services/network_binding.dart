@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 
+import '../../presentation/pages/bottom_bar/controller/bottom_bar_controller.dart';
 import 'network_manager.dart';
 
 class NetworkBinding extends Bindings {
@@ -7,6 +8,7 @@ class NetworkBinding extends Bindings {
   @override
   void dependencies() {
     Get.put(GetXNetworkManager(), permanent: true);
+    Get.lazyPut(() => BottomBarController());
     // Get.lazyPut<GetXNetworkManager>(() => GetXNetworkManager());
   }
 }
