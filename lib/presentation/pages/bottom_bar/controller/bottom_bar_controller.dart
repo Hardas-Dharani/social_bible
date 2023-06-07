@@ -2,21 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
+import '../../bible_tab/bible_tab.dart';
 import '../../browser_tab/borwser_tab.dart';
 import '../../chat/chat.dart';
 import '../../home_tab/home_tab.dart';
+import '../../reference/reference_screen.dart';
 
 class BottomBarController extends GetxController {
   var selectedTab = 0.obs;
   final List<Widget> pages = [
     const HomeTab(),
-    const Center(
-      child: Text("Products"),
-    ),
+    const BibleScreen(),
     const BrowserTab(),
-    const Center(
-      child: Text("Contact"),
-    ),
+    const ReferenceScreen(),
     const ChatScreen()
   ];
 
