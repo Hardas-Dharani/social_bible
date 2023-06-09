@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
+import 'package:social_bible/presentation/pages/splash/splash.dart';
 
 import '../app/services/network_binding.dart';
 import '../routes/app_routes.dart';
 import '../routes/app_routings.dart';
-import 'pages/bottom_bar/bottom_bar.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -16,8 +16,8 @@ class App extends StatelessWidget {
       return GetMaterialApp(
         debugShowCheckedModeBanner: false,
         initialBinding: NetworkBinding(),
-        initialRoute: Routes.bottomBar,
-        home: const BottomNavigationBars(),
+        initialRoute: Routes.splashScreen,
+        home: const SplashScreen(),
         getPages: RoutingModule().routingList,
       );
     });

@@ -27,7 +27,17 @@ class SigInScreen extends GetView<SigninController> {
       child: Form(
         key: controller.formKey,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            IconButton(
+              onPressed: () {
+                Get.back();
+              },
+              icon: Icon(
+                Icons.arrow_back,
+                color: AppColors.white,
+              ),
+            ),
             Expanded(
                 flex: 2,
                 child: Padding(
@@ -35,20 +45,8 @@ class SigInScreen extends GetView<SigninController> {
                   child: Column(
                     // crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Align(
-                        alignment: Alignment.topLeft,
-                        child: GestureDetector(
-                          onTap: () {
-                            Get.back();
-                          },
-                          child: Icon(
-                            Icons.arrow_back,
-                            color: AppColors.white,
-                          ),
-                        ),
-                      ),
                       SizedBox(
-                        height: 8.h,
+                        height: 3.h,
                       ),
                       Center(
                         child: SvgPicture.asset(
@@ -75,7 +73,7 @@ class SigInScreen extends GetView<SigninController> {
                   ),
                 )),
             Expanded(
-                flex: 3,
+                flex: 4,
                 child: Container(
                   alignment: Alignment.center,
                   width: Get.width,

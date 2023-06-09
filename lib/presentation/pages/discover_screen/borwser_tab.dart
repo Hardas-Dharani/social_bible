@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:social_bible/app/config/app_colors.dart';
-import 'package:social_bible/presentation/pages/browser_tab/search_categories.dart';
+import 'package:social_bible/presentation/pages/discover_screen/search_categories.dart';
 
-class BrowserTab extends StatelessWidget {
+import '../bottom_bar/controller/bottom_bar_controller.dart';
+import '../chat/widgets/serach_text.dart';
+
+class BrowserTab extends GetView<BottomBarController> {
   const BrowserTab({super.key});
 
   @override
@@ -13,31 +17,56 @@ class BrowserTab extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 15.0, vertical: 7.0),
-                color: Colors.white,
-                child: const Row(
-                  children: [
-                    Expanded(
-                      child: TextField(
-                        decoration: InputDecoration(
-                            hintText: "Search",
-                            hintStyle: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 18,
-                            ),
-                            border: InputBorder.none,
-                            prefixIcon: Icon(Icons.search, size: 30.0)),
-                      ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  // IconButton(
+                  //     // padding: EdgeInsets.zero,
+                  //     // alignment: Alignment.centerLeft,
+                  //     onPressed: () {},
+                  //     icon: Icon(
+                  //       Icons.arrow_back,
+                  //       color: AppColors.white,
+                  //     )),
+                  // if (controller.serachBool.value)
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  AnimatedContainer(
+                    width: Get.width - 100,
+                    duration: const Duration(milliseconds: 300),
+                    child: SizedBox(
+                      width: Get.width - 150,
+                      height: 40,
+                      child: SearchTextFormFieldWithOutBorder(
+                          textAlign: TextAlign.center,
+                          paddingIcon: const EdgeInsets.symmetric(
+                              horizontal: 5, vertical: 3),
+                          hintTxt: "Search",
+                          contentPadding: 10,
+                          textEditingController: controller.searchTxtField),
                     ),
-                  ],
-                ),
+                  ),
+                  // if (!controller.serachBool.value)
+                  IconButton(
+                      // alignment: Alignment.centerRight,
+                      // padding: EdgeInsets.zero,
+                      onPressed: () {
+                        // controller.serachBool.value = true;
+                      },
+                      icon: Icon(
+                        Icons.menu,
+                        color: AppColors.white,
+                      )),
+                ],
+              ),
+              const SizedBox(
+                height: 10,
               ),
               const SearchCategories(),
               Column(
                 children: <Widget>[
-                  Container(
+                  SizedBox(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[

@@ -3,6 +3,8 @@
 import 'package:expandable_text/expandable_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
+import 'package:sizer/sizer.dart';
 import 'package:social_bible/app/util/common_txt.dart';
 
 import '../../../app/config/app_colors.dart';
@@ -18,14 +20,47 @@ class AccountScreen extends StatelessWidget {
         length: 3,
         child: Container(
             color: AppColors.white,
-            child: const Column(
+            child: Stack(
               children: [
-                ProfileHeader(),
-                SizedBox(
-                  height: 20,
+                Container(
+                  height: 15.h,
+                  color: AppColors.primary,
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        IconButton(
+                          onPressed: () {
+                            Get.back();
+                          },
+                          icon: Icon(
+                            Icons.arrow_back,
+                            color: AppColors.white,
+                          ),
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            // Get.back();
+                          },
+                          icon: Icon(
+                            Icons.menu,
+                            color: AppColors.white,
+                          ),
+                        ),
+                      ]),
                 ),
-                tabheader(),
-                tabbody(),
+                Column(
+                  children: [
+                    SizedBox(
+                      height: 5.h,
+                    ),
+                    const ProfileHeader(),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    const tabheader(),
+                    const tabbody(),
+                  ],
+                ),
               ],
             )),
       ),
@@ -58,7 +93,7 @@ class ProfileHeader extends StatelessWidget {
                     image: NetworkImage(profile), fit: BoxFit.cover)),
           ),
           Text(
-            'Mohammed bouziani',
+            'John',
             style: TextStyle(
                 fontWeight: FontWeight.w600,
                 color: AppColors.black,

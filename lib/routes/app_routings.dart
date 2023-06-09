@@ -16,25 +16,32 @@ class RoutingModule {
       name: Routes.splashScreen,
       page: () => const SplashScreen(),
       // binding: SplashBinding(),
+      transition: Transition.fadeIn, // Example animation: Fade In
     ),
     GetPage(
       name: Routes.bottomBar,
       page: () => const BottomNavigationBars(),
       binding: BottomBarBinding(),
+      transition: Transition
+          .rightToLeftWithFade, // Example animation: Slide Right with Fade
     ),
     GetPage(
       name: Routes.signInScreen,
       page: () => const SigInScreen(),
       binding: SiginBinding(),
+      transition:
+          Transition.leftToRight, // Example animation: Slide Left to Right
     ),
     GetPage(
       name: Routes.signUpScreen,
       page: () => const SignUpScreen(),
       binding: SignupBinding(),
+      transition: Transition.zoom, // Example animation: Zoom In
     ),
     GetPage(
       name: Routes.startScreen,
       page: () => const StartPage(),
+      transition: Transition.fade, // Example animation: Fade
     ),
   ];
 }

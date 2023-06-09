@@ -110,13 +110,6 @@ class HomeTab extends StatelessWidget {
                         image: 'assets/images/story8.jpg'),
                   ],
                 )),
-
-            const FeedPost(
-                username: 'samwilson',
-                likes: "an't be assigned to the parameter",
-                time: '2 hours',
-                profilePicture: 'assets/images/Sam Wilson.jpg',
-                image: 'assets/images/story1.jpg'),
           ],
         ),
       ),

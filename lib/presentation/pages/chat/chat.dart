@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 
 import '../../../app/config/app_colors.dart';
 import '../../../app/util/common_txt.dart';
-import '../../../app/util/svg_image.dart';
 import 'controller/chat_controller.dart';
 import 'widgets/chat_user_card.dart';
 import 'widgets/serach_text.dart';
@@ -33,14 +32,9 @@ class ChatScreen extends GetView<ChatController> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          IconButton(
-                              padding: EdgeInsets.zero,
-                              alignment: Alignment.centerLeft,
-                              onPressed: () {},
-                              icon: SvgImageAssetWidget(
-                                imagePath: 'backSvg',
-                                color: AppColors.white,
-                              )),
+                          const SizedBox(
+                            width: 20,
+                          ),
                           // if (controller.serachBool.value)
                           AnimatedContainer(
                             width: Get.width - 100,
