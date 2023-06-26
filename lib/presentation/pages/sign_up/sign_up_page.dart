@@ -61,7 +61,7 @@ class SignUpScreen extends GetView<SignupController> {
                         color: AppColors.white,
                       ),
                       CommonText(
-                        text: 'Soical Bible Commentary',
+                        text: 'Social Bible Commentary',
                         fontSize: 21,
                         color: AppColors.white,
                       ),

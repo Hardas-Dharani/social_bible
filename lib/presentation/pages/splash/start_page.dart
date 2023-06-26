@@ -37,7 +37,7 @@ class StartPage extends StatelessWidget {
             color: AppColors.white,
           ),
           CommonText(
-            text: 'Soical Bible Commentray',
+            text: 'Social Bible Commentray',
             fontSize: 21,
             color: AppColors.white,
           ),

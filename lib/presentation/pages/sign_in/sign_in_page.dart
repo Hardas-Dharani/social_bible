@@ -62,7 +62,7 @@ class SigInScreen extends GetView<SigninController> {
                         color: AppColors.white,
                       ),
                       CommonText(
-                        text: 'Soical Bible Commentary',
+                        text: 'Social Bible Commentary',
                         fontSize: 21,
                         color: AppColors.white,
                       ),
@@ -92,7 +92,7 @@ class SigInScreen extends GetView<SigninController> {
                           ),
                           Lottie.asset('assets/svg/sign_ani.json', width: 100),
                           CommonText(
-                            text: "Let's connect with Soical Bible",
+                            text: "Let's connect with Social Bible",
                             color: AppColors.black,
                             fontSize: 18,
                           ),
