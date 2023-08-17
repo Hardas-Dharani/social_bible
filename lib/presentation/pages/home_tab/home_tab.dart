@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:social_bible/app/config/app_colors.dart';
+import 'package:social_bible/presentation/pages/bottom_bar/controller/bottom_bar_controller.dart';
 
 import '../account/profile_screen.dart';
 import 'feed_post.dart';
@@ -49,6 +50,10 @@ class HomeTab extends StatelessWidget {
             padding: const EdgeInsets.only(right: 20.0),
             child: GestureDetector(
                 onTap: () {
+                  Get.find<BottomBarController>()
+                      .scaffoldKey
+                      .currentState!
+                      .openEndDrawer();
                   // Navigator.of(context).push(
                   //     MaterialPageRoute(builder: (context) => MessagesPage()));
                 },

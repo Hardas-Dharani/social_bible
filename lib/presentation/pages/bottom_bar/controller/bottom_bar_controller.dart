@@ -7,6 +7,7 @@ import '../../chat/chat.dart';
 import '../../discover_screen/borwser_tab.dart';
 import '../../home_tab/home_tab.dart';
 import '../../reference/reference_screen.dart';
+import '../widget/new_feed.dart';
 
 class BottomBarController extends GetxController {
   var selectedTab = 0.obs;
@@ -15,8 +16,17 @@ class BottomBarController extends GetxController {
     const HomeTab(),
     const BibleScreen(),
     const BrowserTab(),
-    const ReferenceScreen(),
+    CreateMemoryScreen(),
     const ChatScreen()
+  ];
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+
+  List<Map<String, dynamic>> drawerItem = [
+    {'label': 'Home', 'icon': Icons.home_outlined},
+    {'label': 'My Wish Lists', 'icon': Icons.list},
+    {'label': 'Reference', 'icon': Icons.live_tv},
+    {'label': 'Settings', 'icon': Icons.settings},
+    {'label': 'Sign Out', 'icon': Icons.logout},
   ];
   List<String> categories = [
     'Travels',
@@ -30,7 +40,7 @@ class BottomBarController extends GetxController {
     'Sports',
     'Beauty',
   ];
-   List<int> selectedCategories = [];
+  List<int> selectedCategories = [];
   void toggleCategorySelection(int index) {
     if (selectedCategories.contains(index)) {
       selectedCategories.remove(index);
@@ -43,6 +53,7 @@ class BottomBarController extends GetxController {
   bool isCategorySelected(int index) {
     return selectedCategories.contains(index);
   }
+
   TextEditingController searchTxtField = TextEditingController();
 
   void changeTab(int index) {
